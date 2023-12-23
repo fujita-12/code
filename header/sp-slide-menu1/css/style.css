@@ -1,0 +1,100 @@
+header {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+.header-inner {
+    position: relative;
+    height: 50%;
+    padding: 0 20px;
+}
+.header-inner .logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.header-inner .logo p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.menu-container  {
+    height: 50%;
+}
+.menu {
+    display: flex;
+    transition: transform 0.3s ease;
+    justify-content: space-between;
+    background-color: #000;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+.menu li {
+    font-size: 1.4rem;
+    margin: 0 20px;
+    text-align: center;
+}
+.menu li a {
+    cursor: pointer;
+    color: #fff;
+}
+.menu li a:hover {
+    color: cadetblue;
+}
+
+.inner {
+    width: 80%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+main {
+    min-height: calc(100vh - 70px - 48px);
+    overflow: hidden;
+}
+
+.copy {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    line-height: 3;
+}
+
+.arrow {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-container {
+        overflow-x: hidden;
+        white-space: nowrap;
+        position: relative;
+    }
+    .menu {
+        display: inline-flex;
+        transition: transform 0.3s ease;
+    }
+    .menu li.menu-item {
+        width: calc(100vw / 3);
+        margin: 0;
+        
+    }
+    .arrow {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    .arrow-left {
+        left: 5px;
+    }
+    .arrow-right {
+        right: 5px;
+    }
+}

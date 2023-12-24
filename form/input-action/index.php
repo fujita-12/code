@@ -21,6 +21,37 @@
                 <p>inputをフォーカスしたら表示させる項目<br>何も入力されてない場合は隠す</p>
             </div>
         </section>
+        <section class="section-2">
+            <h2>1-2</h2>
+            <p>配列を表示して一番新しいradioボタンにチェックを入れる</p>
+            <?php 
+                $buttonInfo = array(
+                    array(
+                        'dataNum' => 'number1',
+                        'val' => 1,
+                        'text' => 'ラジオボタン1'
+                    ),
+                    array(
+                        'dataNum' => 'number2',
+                        'val' => 2,
+                        'text' => 'ラジオボタン2'
+                    ),
+                    array(
+                        'dataNum' => 'number3',
+                        'val' => 3,
+                        'text' => 'ラジオボタン3'
+                    )
+                );
+            ?>
+            <?php foreach($buttonInfo as $key => $val): ?>
+                <div class="radio-item-1-2">
+                    <label>
+                        <input type="radio" name="sample1-2" value="<?php echo $val['val']; ?>" data-number="<?php echo $val['dataNum'];?>">
+                        <span><?php echo $val['text']; ?></span>
+                    </label>
+                </div>
+            <?php endforeach; ?>
+        </section>
     </div>
 </main>
 <footer>

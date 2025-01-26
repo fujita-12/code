@@ -1,0 +1,39 @@
+.inner {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.submit-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    transition: .3s;
+}
+.submit-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.question {
+    margin-top: 15px;
+}
+
+.check {
+    margin-top: 1515px;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    margin-left: 10px;
+}
+
+span[class^="error-text-"] {
+    color: red;
+}

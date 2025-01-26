@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="registration-form">
+        <div class="inner">
+            <form method="POST" action="">
+                <div>
+                    <h1 class='text-center font-bold '>登録フォーム</h1>
+                    <!-- アンケートフィールド -->
+                    <div class="questionnaire">
+                        <div class="question question-1">
+                            <div>1.アンケートカテゴリー1<span class="error-message error-message-1"></span></div>
+                            <div>
+                                <input id="q1-1" type="checkbox" name="q_1[]" value="1" data-qNumber="1">
+                                <label for="q1-1">アンケート1-1</label>
+                            </div>
+                            <div>
+                                <input id="q1-2" type="checkbox" name="q_1[]" value="2" data-qNumber="1">
+                                <label for="q1-2">アンケート1-2</label>
+                            </div>
+                            <div>
+                                <input id="q1-3" type="checkbox" name="q_1[]" value="3" data-qNumber="1">
+                                <label for="q1-3">アンケート1-3</label>
+                            </div>
+                            <div>
+                                <input id="q1-4" type="checkbox" name="q_1[]" value="4" data-qNumber="1">
+                                <label for="q1-4">アンケート1-4</label>
+                            </div>
+                            <div>
+                                <input id="q1-5" class="has-text-1-5" type="checkbox" name="q_1[]" value="5" data-qNumber="1">
+                                <label for="q1-5">アンケート1-5</label>
+                                <input type="text" name="q_1_5_text" class="q-text-1-5 disabled"><span class="error-text-1-5"></span>
+                            </div>
+                        </div>
+                        <div class="question question-2">
+                            <div>2.アンケートカテゴリー2<span class="error-message error-message-2"></span></div>
+                            <div>
+                                <input id="q2-1" type="radio" name="q_2" value="1" {{ old ('q_2') == '1' ? 'checked' : '' }} data-qNumber="2">
+                                <label for="q2-1">アンケート2-1</label>
+                            </div>
+                            <div>
+                                <input id="q2-2" type="radio" name="q_2" value="2" {{ old ('q_2') == '2' ? 'checked' : '' }} data-qNumber="2">
+                                <label for="q2-2">アンケート2-2</label>
+                            </div>
+                            <div>
+                                <input id="q2-3" type="radio" name="q_2" value="3" {{ old ('q_2') == '3' ? 'checked' : '' }} data-qNumber="2">
+                                <label for="q2-3">アンケート2-3</label>
+                            </div>
+                        </div>
+                        <div class="question question-3">
+                            <div>3.アンケートカテゴリー3<span class="error-message error-message-3"></span></div>
+                            <div>
+                                <input id="q3-1" type="radio" name="q_3" value="1" {{ old ('q_3') == '1' ? 'checked' : '' }} data-qNumber="3">
+                                <label for="q3-1">アンケート3-1</label>
+                            </div>
+                            <div>
+                                <input id="q3-2" type="radio" name="q_3" value="2" {{ old ('q_3') == '2' ? 'checked' : '' }} data-qNumber="3">
+                                <label for="q3-2">アンケート3-2</label>
+                            </div>
+                            <div>
+                                <input id="q3-3" class="has-text-3-3" type="radio" name="q_3" value="3" {{ old ('q_3') == '3' ? 'checked' : '' }} data-qNumber="3">
+                                <label for="q3-3">アンケート3-3</label>
+                                <input type="text" name="q_3_3_text" class="disabled q-text-3-3"><span class="error-text-3-3"></span>
+                            </div>
+                        </div>
+                        <div class="question question-4">
+                            <div>4.アンケートカテゴリー4<span class="error-message error-message-4"></span></div>
+                            <div>
+                                <input id="q4-1" type="radio" name="q_4" value="1" data-qNumber="4">
+                                <label for="q4-1">アンケート4-1</label>
+                            </div>
+                            <div>
+                                <input id="q4-2" class="has-text-4-2" type="radio" name="q_4" value="2" data-qNumber="4">
+                                <label for="q4-2">アンケート4-2</label>
+                                <input type="text" name="q_4_2_text" class="q-text-4-2 disabled"><span class="error-text-4-2"></span>
+                            </div>
+                            <div>
+                                <input id="q4-3" class="has-text-4-3" type="radio" name="q_4" value="3" data-qNumber="4">
+                                <label for="q4-3">アンケート4-3</label>
+                                <input type="text" name="q_4_3_text" class="q-text-4-3 disabled"><span class="error-text-4-3"></span>
+                            </div>
+                        </div>
+                        <div class="question question-5">
+                            <div>5.アンケートカテゴリー5<span class="error-message error-message-5"></span></div>
+                            <select name="q_5"  data-qNumber="5">
+                                <option value = "">選択してください</option>
+                                <option value = "1">~19歳</option>
+                                <option value = "2">20歳~29歳</option>
+                                <option value = "3">30歳~39歳</option>
+                                <option value = "4">40歳~49歳</option>
+                                <option value = "5">50歳~59歳</option>
+                                <option value = "6">60歳~</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="check question">
+                        <input id="agree" type="checkbox" name="agree" data-qNumber="6">
+                        <label for="agree">同意<span class="error-message error-message-6"></span></label>
+                    </div>
+
+                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
+                    <!-- 登録ボタン -->
+                    <div class="flex items-center justify-center my-4">
+                        <div class="submit-wrap">
+                            <button class="submit-button disabled" type="submit">
+                                登録を完了する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.sp {
+  display: none;
+}
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+table {
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+th {
+  background-color: #f5f5f5;
+}
+
+.list-wrap-sp .list-item .list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.list-wrap-sp .list-item .list-flex div {
+  width: calc((100% - 15px) / 4);
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
